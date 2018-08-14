@@ -37,23 +37,23 @@ public class MultipleBrowser {
 			System.out.println("Exception is=="+e.getMessage());
 		}
 		
-		DesiredCapabilities dcp = new DesiredCapabilities();
+		/*DesiredCapabilities dcp = new DesiredCapabilities();
 		dcp.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);
 		dcp.setCapability(CapabilityType.PLATFORM, Platform.LINUX);
 		dcp.setCapability(CapabilityType.SUPPORTS_APPLICATION_CACHE, true);
 		dcp.setCapability(CapabilityType.SUPPORTS_NETWORK_CONNECTION, true);
 		dcp.setCapability("name", "GoogleTest");
-		dcp.setCapability("idleTimeout", 150);
+		dcp.setCapability("idleTimeout", 150);*/
 		//driver = new RemoteWebDriver(new URL("http://35.193.7.170:4444/wd/hub"),dcp);
 		//System.out.println(pro.getProperty("selenium.url"));
-		driver = new RemoteWebDriver(new URL(pro.getProperty("selenium.url")),dcp);
+		//driver = new RemoteWebDriver(new URL(pro.getProperty("selenium.url")),dcp);
 		//System.setProperty("webdriver.chrome.driver","D:\\driver\\chromedriver_win32\\chromedriver.exe");
 		/*System.setProperty("webdriver.chrome.driver",pro.getProperty("chrome.driver").toString());
 		//Open browser instance
 		driver = new ChromeDriver();*/
-		driver.get(url);
-		System.out.println("Opening Google");
-		Thread.sleep(100);
+		//driver.get(url);
+		//System.out.println("Opening Google");
+		//Thread.sleep(100);
 	}
 
 	@After
@@ -69,7 +69,7 @@ public class MultipleBrowser {
 		dcp.setCapability(CapabilityType.PLATFORM, Platform.LINUX);
 		dcp.setCapability(CapabilityType.SUPPORTS_APPLICATION_CACHE, true);
 		dcp.setCapability(CapabilityType.SUPPORTS_NETWORK_CONNECTION, true);
-		dcp.setCapability("name", "GoogleTest");
+		dcp.setCapability("name", "GoogleTestChrome");
 		dcp.setCapability("idleTimeout", 150);
 		//driver = new RemoteWebDriver(new URL("http://35.193.7.170:4444/wd/hub"),dcp);
 		//System.out.println(pro.getProperty("selenium.url"));
@@ -102,7 +102,7 @@ public class MultipleBrowser {
 		dcp.setCapability(CapabilityType.PLATFORM, Platform.LINUX);
 		dcp.setCapability(CapabilityType.SUPPORTS_APPLICATION_CACHE, true);
 		dcp.setCapability(CapabilityType.SUPPORTS_NETWORK_CONNECTION, true);
-		dcp.setCapability("name", "GoogleTest");
+		dcp.setCapability("name", "GoogleTestFirefox");
 		dcp.setCapability("idleTimeout", 150);
 		//driver = new RemoteWebDriver(new URL("http://35.193.7.170:4444/wd/hub"),dcp);
 		//System.out.println(pro.getProperty("selenium.url"));
