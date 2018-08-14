@@ -58,7 +58,8 @@ public class MultipleBrowser {
 
 	@After
 	public void tearDown() throws Exception {
-		driver.close();
+		//driver.close();
+		driver.quit();
 	}
 
 	@Test
