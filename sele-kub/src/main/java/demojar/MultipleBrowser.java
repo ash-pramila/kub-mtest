@@ -54,6 +54,27 @@ public class MultipleBrowser {
 		//driver.get(url);
 		//System.out.println("Opening Google");
 		//Thread.sleep(100);
+		/*
+		import org.openqa.selenium.support.ui.ExpectedConditions;
+		import org.openqa.selenium.support.ui.WebDriverWait;
+
+		WebDriverWait wait;
+		wait = new WebDriverWait(driver,1000);
+
+		Thread.sleep(100);
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("News"))).click();
+		System.out.println("Clicked on News");
+		Thread.sleep(100);
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Videos"))).click();
+		System.out.println("Clicked on Videos");
+		Thread.sleep(100);
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Images"))).click();
+		System.out.println("Clicked on Images");
+		Thread.sleep(100);
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Books"))).click();
+		System.out.println("Clicked on Books");
+		Thread.sleep(100);
+		*/
 	}
 
 	@After
