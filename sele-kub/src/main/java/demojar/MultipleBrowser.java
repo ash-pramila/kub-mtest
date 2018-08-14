@@ -21,18 +21,17 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-public class MultipleBroswser {
+public class MultipleBrowser {
 	WebDriver driver;
 	String url="https://www.google.com/";
 	Properties pro;
-	String[] browsers={"CHROME,FIREFOX"};
 	@Before
 	public void setUp() throws Exception {
 		try{
 			/*File src= new File("Property.properties");
 			FileInputStream fis = new FileInputStream(src);*/
 			pro=new Properties();
-			pro.load(SimpleKubSeleniumGridTest.class.getResourceAsStream("/Property.properties"));
+			pro.load(MultipleBrowser.class.getResourceAsStream("/Property.properties"));
 			//pro.load(fis);
 		}catch(Exception e){
 			System.out.println("Exception is=="+e.getMessage());
