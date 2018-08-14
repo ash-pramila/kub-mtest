@@ -129,4 +129,39 @@ public class MultipleBrowser {
 	    //driver.manage().addCookie(cookie);
 		Thread.sleep(100);
 	}
+	@Test
+	public void test1() throws Exception {
+		//Chrome
+		DesiredCapabilities dcp = new DesiredCapabilities();
+		dcp.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
+		dcp.setCapability(CapabilityType.PLATFORM, Platform.LINUX);
+		dcp.setCapability(CapabilityType.SUPPORTS_APPLICATION_CACHE, true);
+		dcp.setCapability(CapabilityType.SUPPORTS_NETWORK_CONNECTION, true);
+		dcp.setCapability("name", "GoogleTest2Firefox");
+		dcp.setCapability("idleTimeout", 150);
+		//driver = new RemoteWebDriver(new URL("http://35.193.7.170:4444/wd/hub"),dcp);
+		//System.out.println(pro.getProperty("selenium.url"));
+		driver = new RemoteWebDriver(new URL(pro.getProperty("selenium.url")),dcp);
+		//System.setProperty("webdriver.chrome.driver","D:\\driver\\chromedriver_win32\\chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver",pro.getProperty("chrome.driver").toString());
+		//Open browser instance
+		driver = new ChromeDriver();*/
+		driver.get(url);
+		System.out.println("Opening Google");
+		Thread.sleep(100);
+		
+		//Test
+		System.out.println("Page Title:"+driver.getTitle());
+		//driver.findElement(By.id("lst-ib")).sendKeys("Kubernetes");
+		driver.findElement(By.id(pro.getProperty("searchbox"))).sendKeys("zalenium");
+		System.out.println("another Data entered to search");
+		Thread.sleep(100);
+		//driver.findElement(By.name("btnK")).click();
+		//driver.findElement(By.id("lst-b")).sendKeys(Keys.ENTER);
+		driver.findElement(By.id(pro.getProperty("searchbox"))).sendKeys(Keys.ENTER);
+		System.out.println("search clicked");
+		//Cookie cookie = new Cookie("zaleniumTestPassed", "true");
+	    //driver.manage().addCookie(cookie);
+		Thread.sleep(100);
+	}
 }
