@@ -21,8 +21,6 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-@RunWith(Parameterized.class)
-
 public class MultipleBroswser {
 	WebDriver driver;
 	String url="https://www.google.com/";
